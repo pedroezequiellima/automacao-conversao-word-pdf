@@ -1,5 +1,6 @@
 import os
 import win32com.client
+import pyautogui
 from datetime import datetime
 
 
@@ -25,7 +26,7 @@ for nome_arquivo in os.listdir(pasta_entrada):
 
 word.Quit()
 
-import pyautogui
+#Ultilizando o Pyautogui
 pyautogui.PAUSE = 2
 pyautogui.press('win')
 pyautogui.write('Explorador de Arquivos')
@@ -34,9 +35,10 @@ pyautogui.click(x=114, y=795)
 pyautogui.click(x=278, y=486, clicks=2)
 pyautogui.click(x=423, y=258, clicks=2)
 
-
+#Data da conversao
 data_hoje = datetime.now()
 data_formatada = data_hoje.strftime('%d/%m/%Y')
 print(data_formatada)
 print("Conversão Concluída")
+
 print("Mais um projeto de PEDRO EZEQUIEL")
